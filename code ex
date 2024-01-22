@@ -52,6 +52,26 @@ docker login
 docker tag html-app acctname/container
 docker push acctname/container
 
-(continer name= my choice)
+
+
+jenkins pipeline
+node{
+stage('Compile'){
+		echo "Compiled Successfully!!";
+	}
+
+stage('JUnit') {
+		echo "JUnit Passed Succesfully!";
+}
+
+stage('Quality-Gate') {
+		echo "SonarQube Quality Gate passed succesfully!!";
+						/*sh exit ("1");*/
+}
+
+stage('Deploy') {
+		echo "Pass!";
+}
+}
 
 
