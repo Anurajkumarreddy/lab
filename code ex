@@ -28,3 +28,30 @@ b. Create a dockerfile to serve this html file using NGINX server
 FROM nginx
 COPY index.html /usr/share/nginx/html/index.html
 EXPOSE 80s
+
+
+3.ubuntu
+FROM ubuntu:jammy-20230916
+
+LABEL maintainer="namrata <dasnamrata795@gmail.com>"
+
+LABEL description="This example Dockerfile installs ubuntu and displays a message."
+
+RUN apt-get update
+
+CMD ["echo", "Hello World...! from my first docker image"]
+
+
+
+
+4.docker commands
+cd 
+docker build -t html-app " folderlink"
+docker run --name (container) -d -p 8081:80 html-app
+docker login
+docker tag html-app acctname/container
+docker push acctname/container
+
+(continer name= my choice)
+
+
